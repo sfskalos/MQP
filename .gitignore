@@ -1,0 +1,9 @@
+data/*
+!data/README.md
+outputs/
+__pycache__/
+*.py[cod]
+.idea/
+.vscode/
+.DS_Store
+

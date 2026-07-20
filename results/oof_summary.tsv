@@ -1,0 +1,10 @@
+mode	name	n	acc	bal	f1	auc
+A	MRI only	41	0.5854	0.5833	0.5814	0.6286
+V	MPM only	41	0.6829	0.6810	0.6799	0.7571
+L	English report only	41	0.5610	0.5631	0.5586	0.5714
+AV	MRI + MPM	41	0.6341	0.6310	0.6261	0.7524
+AL	MRI + English report	41	0.6585	0.6583	0.6583	0.6595
+VL	MPM + English report	41	0.6098	0.6107	0.6095	0.7214
+AVL	MRI + MPM + English report	41	0.7073	0.7071	0.7071	0.7429
+AR	MRI + reconstructed MPM	41	0.5854	0.5821	0.5763	0.6167
+ALR	MRI + English report + reconstructed MPM	41	0.6585	0.6571	0.6567	0.6714

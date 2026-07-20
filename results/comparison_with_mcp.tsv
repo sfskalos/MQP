@@ -1,0 +1,9 @@
+mode	name	MCP_best_fold_mean_AUC	MQP_fold_mean_AUC	delta
+A	MRI only	0.5689	0.6297	0.0608
+V	MPM only	0.6672	0.8497	0.1825
+L	English report only	0.3007	0.5781	0.2774
+AV	MRI + MPM	0.7083	0.8194	0.1111
+AL	MRI + English report	0.3936	0.6417	0.2481
+VL	MPM + English report	0.6872	0.7731	0.0859
+AVL	MRI + MPM + English report	0.6981	0.7814	0.0833
+AR	MRI + reconstructed MPM	0.5722	0.6311	0.0589
