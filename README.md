@@ -5,7 +5,7 @@ It combines ROI-MRI, multiscale MPM pathology, and English clinical-report
 representations, while learning an MRI-to-MPM latent reconstructor for inference
 when pathology is unavailable.
 
-![MQP architecture](figures/MQP_architecture_CVPR.svg)
+![MQP architecture](figures/MQP_architecture_CVPR_v2.svg)
 
 ## Repository contents
 

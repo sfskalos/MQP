@@ -10,8 +10,8 @@ MPM pathology, and English clinical text under incomplete-modality settings.
 - MRI: MedCLIP ResNet-50 ROI features.
 - MPM: DINOv2-small three-scale tokens with learned scale-aware processing.
 - Text: BioBERT CLS features.
-- Fusion: modality-specific Gaussian shared/private disentanglement,
-  cross-modal attention, and uncertainty-aware gated aggregation.
+- Fusion: modality-specific Gaussian shared/private disentanglement, modality
+  token construction, and posterior-uncertainty-aware softmax aggregation.
 - Missing MPM: MRI-conditioned latent reconstruction trained with
   SmoothL1/cosine reconstruction and classification distillation losses.
 
@@ -27,4 +27,3 @@ confidence intervals, calibration analysis, and prospective testing are required
 No raw images, reports, labels, patient identifiers, or per-case predictions are
 included in this repository. Released checkpoints have also been stripped of
 fold membership and local file paths.
-
