@@ -5,20 +5,7 @@ It combines ROI-MRI, multiscale MPM pathology, and English clinical-report
 representations, while learning an MRI-to-MPM latent reconstructor for inference
 when pathology is unavailable.
 
-```mermaid
-flowchart LR
-    MRI[ROI MRI] --> A[MedCLIP]
-    MPM[MPM x3 scales] --> V[DINOv2 + scale tokens]
-    TXT[Clinical text] --> L[BioBERT]
-    A --> D[Shared/private Gaussian disentanglement]
-    V --> D
-    L --> D
-    D --> X[Cross-modal attention]
-    X --> U[Uncertainty-aware fusion]
-    U --> C[PIK3CA / MAP3K3]
-    A --> R[MRI-to-MPM latent reconstruction]
-    R --> X
-```
+![MQP architecture](figures/MQP_architecture_CVPR.svg)
 
 ## Repository contents
 
@@ -84,4 +71,3 @@ Conceptual inspiration: *MIDAS: Mutual Information Disentanglement with
 Uncertainty-Aware Fusion for Incomplete Multimodal Sentiment Analysis*, IEEE
 Transactions on Pattern Analysis and Machine Intelligence, 2026,
 doi: `10.1109/TPAMI.2026.3713694`.
-

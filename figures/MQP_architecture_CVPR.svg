@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="820" viewBox="0 0 1800 820">
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#273142"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#7656A7"/>
+    </marker>
+    <pattern id="mpmDots" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="5" r="2.4" fill="#D7655A"/>
+      <circle cx="13" cy="12" r="3.1" fill="#8F4C89"/>
+      <circle cx="16" cy="3" r="1.5" fill="#EAA15E"/>
+    </pattern>
+    <style>
+      .label{font-family:Arial,Helvetica,sans-serif;font-size:20px;font-weight:600;fill:#273142;letter-spacing:0}
+      .small{font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:600;fill:#485368;letter-spacing:0}
+      .tiny{font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:600;fill:#5D687B;letter-spacing:0}
+      .arrow{fill:none;stroke:#273142;stroke-width:2.2;marker-end:url(#arrow)}
+      .guide{fill:none;stroke:#AAB2C0;stroke-width:1.6;stroke-dasharray:6 6}
+      .recon{fill:none;stroke:#7656A7;stroke-width:2.4;stroke-dasharray:8 6;marker-end:url(#arrow-purple)}
+    </style>
+  </defs>
+  <rect width="1800" height="820" fill="#FFFFFF"/>
+
+  <!-- modality inputs -->
+  <g transform="translate(38 104)">
+    <rect x="0" y="0" width="142" height="130" rx="6" fill="#F7FAFC" stroke="#8AA6BF" stroke-width="2"/>
+    <rect x="14" y="14" width="114" height="82" rx="4" fill="#111820"/>
+    <ellipse cx="71" cy="55" rx="37" ry="32" fill="#B8C1CA"/>
+    <ellipse cx="71" cy="55" rx="24" ry="22" fill="#707A84"/>
+    <path d="M57 46 C68 31,91 41,88 61 C85 78,62 79,54 65 Z" fill="none" stroke="#56C6C2" stroke-width="3"/>
+    <text class="label" x="71" y="120" text-anchor="middle">MRI</text>
+  </g>
+  <g transform="translate(38 330)">
+    <rect x="0" y="0" width="142" height="130" rx="6" fill="#FFF9F7" stroke="#D88B82" stroke-width="2"/>
+    <rect x="14" y="14" width="114" height="82" rx="4" fill="#F7D9D0"/>
+    <rect x="14" y="14" width="114" height="82" rx="4" fill="url(#mpmDots)"/>
+    <text class="label" x="71" y="120" text-anchor="middle">MPM</text>
+  </g>
+  <g transform="translate(38 556)">
+    <rect x="0" y="0" width="142" height="130" rx="6" fill="#F7FBF8" stroke="#7DA98A" stroke-width="2"/>
+    <rect x="20" y="20" width="102" height="6" rx="3" fill="#7DA98A"/>
+    <rect x="20" y="36" width="82" height="5" rx="2" fill="#BCCFC1"/>
+    <rect x="20" y="51" width="96" height="5" rx="2" fill="#BCCFC1"/>
+    <rect x="20" y="66" width="70" height="5" rx="2" fill="#BCCFC1"/>
+    <rect x="20" y="81" width="88" height="5" rx="2" fill="#BCCFC1"/>
+    <text class="label" x="71" y="120" text-anchor="middle">Text</text>
+  </g>
+
+  <!-- frozen encoders -->
+  <g>
+    <rect x="252" y="132" width="164" height="74" rx="6" fill="#DDEBF5" stroke="#6388A6" stroke-width="2"/>
+    <text class="label" x="334" y="163" text-anchor="middle">MedCLIP</text>
+    <text class="tiny" x="334" y="187" text-anchor="middle">ROI encoder</text>
+    <rect x="252" y="358" width="164" height="74" rx="6" fill="#F8DFDA" stroke="#C66F65" stroke-width="2"/>
+    <text class="label" x="334" y="389" text-anchor="middle">DINOv2</text>
+    <g transform="translate(288 406)">
+      <rect x="0" y="0" width="20" height="10" fill="#F1B1A8"/>
+      <rect x="28" y="-4" width="20" height="14" fill="#E58C80"/>
+      <rect x="56" y="-8" width="20" height="18" fill="#C66F65"/>
+    </g>
+    <rect x="252" y="584" width="164" height="74" rx="6" fill="#DDEEE1" stroke="#659476" stroke-width="2"/>
+    <text class="label" x="334" y="615" text-anchor="middle">BioBERT</text>
+    <text class="tiny" x="334" y="639" text-anchor="middle">[CLS]</text>
+  </g>
+
+  <!-- gaussian shared/private factors -->
+  <g>
+    <rect x="500" y="109" width="192" height="120" rx="6" fill="#F8FAFC" stroke="#75849A" stroke-width="2"/>
+    <rect x="516" y="126" width="68" height="84" rx="4" fill="#DCEAF5" stroke="#6F91AD"/>
+    <rect x="608" y="126" width="68" height="84" rx="4" fill="#EEE9F7" stroke="#8C78B1"/>
+    <text class="label" x="550" y="160" text-anchor="middle">S</text><text class="tiny" x="550" y="187" text-anchor="middle">μ  σ</text>
+    <text class="label" x="642" y="160" text-anchor="middle">P</text><text class="tiny" x="642" y="187" text-anchor="middle">μ  σ</text>
+    <rect x="500" y="335" width="192" height="120" rx="6" fill="#F8FAFC" stroke="#75849A" stroke-width="2"/>
+    <rect x="516" y="352" width="68" height="84" rx="4" fill="#F7DFDA" stroke="#C66F65"/>
+    <rect x="608" y="352" width="68" height="84" rx="4" fill="#EEE9F7" stroke="#8C78B1"/>
+    <text class="label" x="550" y="386" text-anchor="middle">S</text><text class="tiny" x="550" y="413" text-anchor="middle">μ  σ</text>
+    <text class="label" x="642" y="386" text-anchor="middle">P</text><text class="tiny" x="642" y="413" text-anchor="middle">μ  σ</text>
+    <rect x="500" y="561" width="192" height="120" rx="6" fill="#F8FAFC" stroke="#75849A" stroke-width="2"/>
+    <rect x="516" y="578" width="68" height="84" rx="4" fill="#DDEEE1" stroke="#659476"/>
+    <rect x="608" y="578" width="68" height="84" rx="4" fill="#EEE9F7" stroke="#8C78B1"/>
+    <text class="label" x="550" y="612" text-anchor="middle">S</text><text class="tiny" x="550" y="639" text-anchor="middle">μ  σ</text>
+    <text class="label" x="642" y="612" text-anchor="middle">P</text><text class="tiny" x="642" y="639" text-anchor="middle">μ  σ</text>
+    <text class="small" x="596" y="82" text-anchor="middle">Gaussian factors</text>
+  </g>
+
+  <!-- MI alignment spine -->
+  <line x1="550" y1="210" x2="550" y2="578" class="guide"/>
+  <circle cx="550" cy="282" r="23" fill="#FFFFFF" stroke="#67758A" stroke-width="2"/>
+  <text class="small" x="550" y="288" text-anchor="middle">MI</text>
+  <circle cx="550" cy="508" r="23" fill="#FFFFFF" stroke="#67758A" stroke-width="2"/>
+  <text class="small" x="550" y="514" text-anchor="middle">MI</text>
+
+  <!-- cross attention -->
+  <g>
+    <rect x="793" y="266" width="214" height="236" rx="6" fill="#F5F7FB" stroke="#536881" stroke-width="2.4"/>
+    <rect x="825" y="295" width="150" height="44" rx="4" fill="#DDEBF5" stroke="#6388A6"/>
+    <rect x="825" y="362" width="150" height="44" rx="4" fill="#F8DFDA" stroke="#C66F65"/>
+    <rect x="825" y="429" width="150" height="44" rx="4" fill="#DDEEE1" stroke="#659476"/>
+    <path d="M842 318 C875 350,925 350,958 318 M842 384 C875 416,925 416,958 384 M842 451 C875 419,925 419,958 451" fill="none" stroke="#536881" stroke-width="2"/>
+    <text class="label" x="900" y="246" text-anchor="middle">Cross-Attention</text>
+  </g>
+
+  <!-- uncertainty fusion -->
+  <g>
+    <rect x="1100" y="304" width="194" height="160" rx="6" fill="#FFF3D6" stroke="#C89C43" stroke-width="2.4"/>
+    <circle cx="1140" cy="349" r="17" fill="#FFFFFF" stroke="#C89C43" stroke-width="2"/><text class="small" x="1140" y="355" text-anchor="middle">σ</text>
+    <rect x="1172" y="334" width="90" height="12" rx="3" fill="#E7C87C"/>
+    <rect x="1172" y="358" width="58" height="12" rx="3" fill="#7FA0BC"/>
+    <rect x="1172" y="382" width="74" height="12" rx="3" fill="#D8897F"/>
+    <circle cx="1197" cy="429" r="22" fill="#FFFFFF" stroke="#C89C43" stroke-width="2"/>
+    <text class="label" x="1197" y="436" text-anchor="middle">Σ</text>
+    <text class="small" x="1197" y="287" text-anchor="middle">U-Fusion</text>
+  </g>
+
+  <!-- prediction head -->
+  <g>
+    <rect x="1390" y="337" width="124" height="94" rx="6" fill="#E4E8EF" stroke="#5D687B" stroke-width="2"/>
+    <path d="M1414 361 H1490 M1425 384 H1479 M1437 407 H1467" stroke="#5D687B" stroke-width="5" stroke-linecap="round"/>
+    <text class="small" x="1452" y="321" text-anchor="middle">Head</text>
+    <rect x="1601" y="306" width="164" height="156" rx="6" fill="#F7FBF8" stroke="#4F8B67" stroke-width="2.4"/>
+    <text class="label" x="1683" y="358" text-anchor="middle">PIK3CA</text>
+    <line x1="1626" y1="384" x2="1740" y2="384" stroke="#A8BEAF" stroke-width="2"/>
+    <text class="label" x="1683" y="422" text-anchor="middle">MAP3K3</text>
+  </g>
+
+  <!-- main arrows -->
+  <path d="M180 169 H252" class="arrow"/><path d="M416 169 H500" class="arrow"/>
+  <path d="M180 395 H252" class="arrow"/><path d="M416 395 H500" class="arrow"/>
+  <path d="M180 621 H252" class="arrow"/><path d="M416 621 H500" class="arrow"/>
+  <path d="M692 169 H742 V317 H793" class="arrow"/>
+  <path d="M692 395 H793" class="arrow"/>
+  <path d="M692 621 H742 V451 H793" class="arrow"/>
+  <path d="M1007 384 H1100" class="arrow"/><path d="M1294 384 H1390" class="arrow"/><path d="M1514 384 H1601" class="arrow"/>
+
+  <!-- missing MPM branch -->
+  <g>
+    <path d="M642 210 V743 H845" class="recon"/>
+    <rect x="845" y="706" width="86" height="70" rx="6" fill="#EEE9F7" stroke="#7656A7" stroke-width="2"/>
+    <circle cx="888" cy="741" r="20" fill="#FFFFFF" stroke="#7656A7" stroke-width="2"/>
+    <text class="label" x="888" y="748" text-anchor="middle">P</text>
+    <path d="M931 741 H992" class="recon"/>
+    <rect x="992" y="706" width="154" height="70" rx="6" fill="#EEE9F7" stroke="#7656A7" stroke-width="2"/>
+    <text class="small" x="1069" y="734" text-anchor="middle">Reconstructor</text>
+    <text class="tiny" x="1069" y="758" text-anchor="middle">Gθ</text>
+    <path d="M1146 741 H1210" class="recon"/>
+    <rect x="1210" y="706" width="116" height="70" rx="6" fill="#F8DFDA" stroke="#7656A7" stroke-width="2"/>
+    <text class="label" x="1268" y="748" text-anchor="middle">MPM̂</text>
+    <path d="M1326 741 H1352 V530 H900 V502" class="recon"/>
+    <path d="M596 455 V690 H1268 V706" class="guide"/>
+    <text class="small" x="742" y="729" fill="#7656A7">missing MPM</text>
+  </g>
+
+  <!-- compact legend -->
+  <g transform="translate(1460 708)">
+    <rect x="0" y="0" width="304" height="68" rx="6" fill="#FAFBFC" stroke="#CBD1DA"/>
+    <rect x="18" y="16" width="24" height="16" fill="#DCEAF5"/><text class="tiny" x="52" y="29">S shared</text>
+    <rect x="154" y="16" width="24" height="16" fill="#EEE9F7"/><text class="tiny" x="188" y="29">P private</text>
+    <line x1="18" y1="50" x2="46" y2="50" class="recon"/><text class="tiny" x="58" y="55">reconstruction</text>
+  </g>
+</svg>
